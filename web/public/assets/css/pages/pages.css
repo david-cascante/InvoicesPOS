@@ -1,0 +1,183 @@
+.hero-bg {
+    background: linear-gradient(135deg, rgba(0,63,68, 0.9) 0%, rgba(0,63,68, 0.9) 100%), url('/assets/img/pos.webp') no-repeat center center;
+    background-size: cover;
+}
+
+.feature-icon {
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+    color: #003f44;
+}
+
+.pricing-card.highlight {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.testimonial-card {
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.modal {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.frequency-btn {
+    transition: all 0.3s ease;
+}
+
+.feature-card {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilos para accesibilidad */
+.high-contrast {
+    --primary: #000000;
+    --primaryDark: #000000;
+    --text-color: #ffffff;
+    --bg-color: #000000;
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+.high-contrast * {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    border-color: var(--text-color) !important;
+}
+
+.high-contrast a,
+.high-contrast button {
+    outline: 2px solid yellow !important;
+}
+
+[data-font-size="small"] {
+    font-size: 90%;
+}
+
+[data-font-size="large"] {
+    font-size: 110%;
+}
+
+/* Asegurar que el modal esté encima de todo */
+.z-50 {
+    z-index: 50;
+}
+
+/* Estilos para el resaltado de toca y habla */
+[data-speak-mode="true"] {
+    cursor: pointer !important;
+}
+
+.speak-highlight {
+    position: relative;
+    z-index: 100;
+    animation: highlight 1.5s ease-out;
+}
+
+@keyframes highlight {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 235, 59, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 235, 59, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 235, 59, 0);
+    }
+}
+
+.speak-border-highlight {
+    position: relative;
+    z-index: 100;
+    outline: 3px solid #FFEB3B !important;
+    outline-offset: 2px;
+    transition: outline 0.1s ease;
+}
+
+/* Modal en alto contraste */
+.high-contrast #accessibilityModal {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.high-contrast #accessibilityModal > div {
+    background-color: #000 !important;
+    border: 2px solid yellow !important;
+    color: #fff !important;
+}
+
+.high-contrast #accessibilityModal h3,
+.high-contrast #accessibilityModal h4,
+.high-contrast #accessibilityModal label,
+.high-contrast #accessibilityModal p {
+    color: #fff !important;
+}
+
+.high-contrast #accessibilityModal button:not(.toggle-button) {
+    background-color: yellow !important;
+    color: #000 !important;
+    border: 1px solid #fff !important;
+}
+
+.high-contrast #accessibilityModal input[type="range"] {
+    background: yellow !important;
+}
+
+.high-contrast #accessibilityModal .close-button {
+    color: yellow !important;
+}
+
+/* Estilo para el botón de reset en alto contraste */
+.high-contrast #resetSettings {
+    background-color: #333 !important;
+    color: yellow !important;
+    border: 1px solid yellow !important;
+}
+
+.high-contrast #resetSettings:hover {
+    background-color: yellow !important;
+    color: #000 !important;
+}
+
+/* Estilos para el modal de bienvenida */
+#welcomeModal {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.high-contrast #welcomeModal > div {
+    background-color: #000 !important;
+    border: 2px solid yellow !important;
+    color: #fff !important;
+}
+
+.high-contrast #welcomeModal h3,
+.high-contrast #welcomeModal p {
+    color: #fff !important;
+}
+
+.high-contrast #setupAccessibility {
+    background-color: yellow !important;
+    color: #000 !important;
+    border: 1px solid #fff !important;
+}
+
+.high-contrast #skipSetup {
+    border-color: yellow !important;
+    color: yellow !important;
+}
